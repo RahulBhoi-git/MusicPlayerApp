@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="musicPlayer.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <h1>Music Player</h1>
+      <div class="theme-toggle-wrapper">
+        <label class="theme-switch">
+          <input type="checkbox" id="theme-toggle">
+          <span class="slider"></span>
+        </label>
+      </div>
+      
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+      <!-- All Songs Section -->
+      <section class="all-songs">
+        <label for="genre-filter">Filter by Genre:</label>
+        <select id="genre-filter">
+          <option value="all">All</option>
+          <option value="pop">Pop</option>
+          <option value="rock">Rock</option>
+          <option value="hip-hop">Hip-Hop</option>
+        </select>
+        <h2>All Songs</h2>
+        <ul id="song-list"></ul>
+      </section>
+
+      <!-- Song Card Section -->
+      <section class="song-card">
+        <h2>Now Playing</h2>
+        <img id="song-img" src="" alt="Song Image">
+        <h3 id="song-title">Song Title</h3>
+        <p id="song-artist">Artist</p>
+        <audio id="audio-player" controls></audio>
+        <div class="controls">
+          <button id="prev-btn">Prev</button>
+          <button id="next-btn">Next</button>
+          <button id="add-to-playlist">Add to Playlist</button>
+        </div>
+      </section>
+
+      <!-- Playlist Section -->
+      <section class="playlists">
+       <form id="playlistForm">
+        <input type="text" id="playlist-name" placeholder="Enter playlist name">
+        <button id="create-playlist" type="submit">Create Playlist</button>
+      </form>
+        <h2>Playlists</h2>
+        <ul id="playlist-list"></ul>
+        <h2>All Playlists</h2>
+        <ul id="all-playlist"></ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="musicPlayer.js"></script>
+</body>
+</html>
